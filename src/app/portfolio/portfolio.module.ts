@@ -11,11 +11,19 @@ import { ContactComponent } from './contact/contact.component';
 import { EducationComponent } from './education/education.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { CertificationComponent } from './certification/certification.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, PortfolioComponent, IntroComponent, FooterComponent, AboutComponent, ExperienceComponent, ContactComponent, EducationComponent, SkillsComponent, ProjectsComponent],
+  declarations: [HeaderComponent,
+                PortfolioComponent,
+                IntroComponent,
+                FooterComponent,
+                AboutComponent,
+                ExperienceComponent,
+                ContactComponent,
+                EducationComponent, SkillsComponent, ProjectsComponent, CertificationComponent],
   imports: [
     CommonModule,
     NgxSpinnerModule

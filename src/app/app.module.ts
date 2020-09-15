@@ -15,6 +15,7 @@ import { EducationComponent } from './portfolio/education/education.component';
 import { ContactComponent } from './portfolio/contact/contact.component';
 import { AboutComponent } from './portfolio/about/about.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { CertificationComponent } from './portfolio/certification/certification.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,7 @@ const routes: Routes = [
      {path: 'projects', component: ProjectsComponent},
     {path: 'experience', component: ExperienceComponent},
     {path: 'education', component: EducationComponent},
-    {path: 'contact', component: ContactComponent},
+    {path: 'certification', component: CertificationComponent},
    ]
 },
 ];
