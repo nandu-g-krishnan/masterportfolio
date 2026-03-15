@@ -1,105 +1,69 @@
 <div class="section" id="skill">
-        <div class="container">
-          <div class="h4 text-center mb-4 title">Skills</div>
-          <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary">
-                    <span class="progress-badge">.Net</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 85%;"></div>
-                      <span class="progress-value">80%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary">
-                    <span class="progress-badge">Angular 7</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 80%;"></div>
-                      <span class="progress-value">80%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary">
-                    <span class="progress-badge">Bootstrap</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 80%;"></div>
-                      <span class="progress-value">70%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary">
-                    <span class="progress-badge">C,C++</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 75%;"></div>
-                      <span class="progress-value">75%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary">
-                    <span class="progress-badge">Microsoft SQL Server</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 75%;"></div>
-                      <span class="progress-value">65%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary">
-                    <span class="progress-badge">HTML,CSS</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 70%;"></div>
-                      <span class="progress-value">70%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary">
-                    <span class="progress-badge">Agile Workflow Process</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 75%;"></div>
-                      <span class="progress-value">85%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary">
-                    <span class="progress-badge">Azure Devops</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                        data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-                        style="width: 70%;"></div>
-                      <span class="progress-value">70%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="container">
+    <div class="h4 text-center mb-3 title">Skills & Technologies</div>
+    <p class="skills-tagline text-center">
+      Building the web, learning continuously, and expanding my engineering graph with every release.
+    </p>
+
+    <div class="skills-web-board" appScrollReveal="up">
+      <div class="web-canvas">
+        <svg class="web-svg" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true">
+          <circle class="web-ring ring-1" cx="500" cy="320" r="112"></circle>
+          <circle class="web-ring ring-2" cx="500" cy="320" r="188"></circle>
+          <circle class="web-ring ring-3" cx="500" cy="320" r="262"></circle>
+          <line
+            class="web-strand"
+            stroke="#8fefff"
+            *ngFor="let skill of skillNodes; trackBy: trackByName"
+            x1="500"
+            y1="320"
+            [attr.x2]="skill.x"
+            [attr.y2]="skill.y"
+            [style.animation-delay.ms]="skill.delayMs">
+          </line>
+        </svg>
+
+        <div class="web-hub" [style.left.%]="toPercentX(hubX)" [style.top.%]="toPercentY(hubY)">
+          <div class="dev-avatar" aria-hidden="true">
+            <div class="dev-head"></div>
+            <div class="dev-body"></div>
+            <div class="dev-laptop"></div>
           </div>
         </div>
+
+        <div
+          class="web-spider"
+          *ngFor="let skill of skillNodes; trackBy: trackByName"
+          [style.left.%]="toPercentX(hubX)"
+          [style.top.%]="toPercentY(hubY)"
+          [style.--travel-x]="(skill.x - hubX) + 'px'"
+          [style.--travel-y]="(skill.y - hubY) + 'px'"
+          [style.animation-delay.ms]="skill.delayMs + 140">
+          <span class="spider-body"></span>
+        </div>
+
+        <div
+          class="skill-bug"
+          *ngFor="let skill of skillNodes; trackBy: trackByName"
+          [style.left.%]="toPercentX(skill.x)"
+          [style.top.%]="toPercentY(skill.y)"
+          [style.animation-delay.ms]="skill.delayMs">
+          <div class="bug-icon-wrap">
+            <i
+              *ngIf="skill.name !== '.NET'"
+              [class.devicon]="skill.iconType === 'devicon'"
+              [class.fa]="skill.iconType === 'fa'"
+              class="bug-icon"
+              [ngClass]="skill.iconClass"></i>
+            <span *ngIf="skill.name === '.NET'" class="bug-text-icon">.NET</span>
+          </div>
+          <div class="bug-name">{{ skill.name }}</div>
+        </div>
       </div>
+
+      <div class="skills-track-row">
+        <span class="skills-track" *ngFor="let track of skillTracks">{{ track }}</span>
+      </div>
+    </div>
+  </div>
+</div>

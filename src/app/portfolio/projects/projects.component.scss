@@ -1,14 +1,204 @@
-h5, .h5 {
-  color: black;
+h5,
+.h5 {
+  color: var(--text-1);
 }
 
-.carousel-control-prev-icon{
-  background-image: url('https://apufpel.com.br/assets/img/seta_prim.png')
-}
-.carousel-control-next-icon{
- background-image: url('https://apufpel.com.br/assets/img/seta_ult.png')
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230d2a3f' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  background-size: 70%;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(20, 82, 117, 0.3);
 }
 
-.carousel-indicators .active{
-    background-color: #f00;
+.carousel-control-next-icon {
+  transform: rotate(180deg);
+}
+
+
+.carousel-indicators .active {
+  background-color: var(--accent);
+}
+
+#projects .projects-grid,
+#experience-projects .professional-grid {
+  row-gap: 1.3rem;
+}
+
+#projects .project-col,
+#experience-projects .col-xl-6 {
+  display: flex;
+}
+
+#projects .blog-entry {
+  width: 100%;
+  display: flex;
+}
+
+.personal-project-card,
+.professional-project-card {
+  width: 100%;
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0, 0.1);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: var(--surface-1);
+}
+
+.personal-project-card:hover,
+.professional-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0,0,0, 0.18);
+}
+
+.professional-project-card {
+  border-radius: 18px;
+  border: 1px solid rgba(26, 98, 135, 0.2);
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  box-shadow: 0 12px 24px rgba(8, 31, 45, 0.12);
+  position: relative;
+}
+
+.professional-project-card .card-title,
+.professional-project-card h5,
+.professional-project-card b {
+  color: #0f3550;
+}
+
+.professional-project-card .project-summary,
+.professional-project-card p,
+.professional-project-card li {
+  color: #385970;
+}
+
+.professional-project-card .project-tech-badge {
+  border-color: rgba(21, 88, 124, 0.24);
+  background: rgba(217, 240, 252, 0.72);
+  color: #1a587c;
+}
+
+.personal-project-card .card-img-top {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.personal-project-card:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+.personal-project-card .card-body,
+.professional-project-card .card-body {
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex: 1 1 auto;
+}
+
+.personal-project-card .card-title,
+.professional-project-card .card-title {
+  line-height: 1.35;
+  margin-bottom: 0.1rem;
+}
+
+.personal-project-card .card-title {
+  font-size: 1.08rem;
+  color: var(--text-1);
+}
+
+.professional-project-card .card-title {
+  font-size: clamp(1.22rem, 1.4vw, 1.38rem);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.personal-project-card .card-text,
+.professional-project-card p,
+.professional-project-card li {
+  font-size: 0.93rem;
+  line-height: 1.56;
+  margin-bottom: 0;
+}
+
+.personal-project-card .card-text {
+  color: var(--text-2);
+}
+
+.professional-project-card p,
+.professional-project-card li,
+.professional-project-card .project-summary {
+  color: #385970;
+}
+
+.project-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-tech-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.25rem 0.62rem;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-0);
+  color: var(--text-2);
+}
+
+.project-actions {
+  margin-top: auto;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.project-actions .btn {
+  width: 100%;
+}
+
+.professional-project-card .project-summary {
+  min-height: 5rem;
+}
+
+.professional-project-card ul {
+  margin-bottom: 0.45rem;
+  padding-left: 1.15rem;
+}
+
+.professional-project-card h5 {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 991px) {
+  .professional-project-card .card-body {
+    padding: 1rem;
+  }
+
+  .professional-project-card .project-summary {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .personal-project-card .card-body,
+  .professional-project-card .card-body {
+    padding: 0.92rem;
+  }
 }

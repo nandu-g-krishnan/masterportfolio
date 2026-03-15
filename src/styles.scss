@@ -1,0 +1,216 @@
+:root {
+  --surface-0: #edf4fb;
+  --surface-1: #ffffff;
+  --surface-2: #e2edf8;
+  --text-1: #0d2a3f;
+  --text-2: #4a667d;
+  --accent: #1379ac;
+  --accent-2: #1bb39e;
+  --border-soft: rgba(24, 83, 113, 0.16);
+  --font-heading: 'Space Grotesk', 'Poppins', 'Manrope', 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Roboto', 'Source Sans 3', 'IBM Plex Sans', 'Segoe UI', sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+#about {
+  scroll-margin-top: 86px;
+}
+
+@media (max-width: 991px) {
+  #about {
+    scroll-margin-top: 94px;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-1);
+  line-height: 1.62;
+  letter-spacing: 0.003em;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(19, 121, 172, 0.18), transparent 43%),
+    radial-gradient(circle at 92% 8%, rgba(27, 179, 158, 0.12), transparent 35%),
+    linear-gradient(180deg, #eef5fc, #f7fbff 38%, #edf4fb 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.01em;
+}
+
+p,
+li,
+span,
+a,
+label,
+input,
+textarea {
+  font-family: var(--font-body);
+}
+
+.container {
+  width: min(100% - 1.1rem, 1440px);
+}
+
+.section {
+  padding-top: clamp(2rem, 4.6vw, 3.4rem);
+  padding-bottom: clamp(1.6rem, 4.2vw, 3rem);
+}
+
+.title {
+  color: var(--text-1);
+  letter-spacing: 0.015em;
+  font-size: clamp(1.32rem, 1.35vw + 1rem, 1.95rem);
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.text-center .title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-1);
+}
+
+.card-body p,
+.card-body li {
+  color: var(--text-2);
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: rgba(17, 84, 121, 0.5);
+  color: #fff;
+  box-shadow: 0 10px 18px rgba(19, 121, 172, 0.24);
+}
+
+.btn-primary:hover {
+  color: #fff;
+  box-shadow: 0 14px 24px rgba(19, 121, 172, 0.32);
+}
+
+.cc-education .card {
+  margin-bottom: 1rem;
+}
+
+#projects .btn,
+#experience-projects .btn {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+@media (max-width: 991px) {
+  .page-content {
+    padding-top: 0.2rem;
+  }
+
+  .cc-profile-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cc-profile-image a:before {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: min(100% - 0.8rem, 1440px);
+  }
+
+  .section {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .card-body {
+    padding: 0.9rem;
+  }
+
+  .h4.title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: min(100% - 2rem, 1520px);
+  }
+}
+
+/* Neutralize legacy now-ui mobile nav behaviors from assets/css/main.css. */
+@media (max-width: 991px) {
+  html.sidebar-collapse .navbar .navbar-collapse,
+  body.sidebar-collapse .navbar .navbar-collapse,
+  html.burger-menu .navbar .navbar-collapse,
+  body.burger-menu .navbar .navbar-collapse {
+    transform: none !important;
+    -webkit-transform: none !important;
+    right: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    padding-top: 0.75rem !important;
+  }
+
+  html.sidebar-collapse .navbar .navbar-collapse::before,
+  body.sidebar-collapse .navbar .navbar-collapse::before,
+  html.burger-menu .navbar .navbar-collapse::before,
+  body.burger-menu .navbar .navbar-collapse::before {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+  }
+
+  html.nav-open .wrapper,
+  body.nav-open .wrapper,
+  html.nav-open .navbar .navbar-translate,
+  body.nav-open .navbar .navbar-translate {
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+}

@@ -1,6 +1,32 @@
-h4{
-    color:#4a4843;
-font-size: 20px;
-margin-bottom: 10px;
-margin-top:2px;
+#education .card {
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
+}
+
+#education .card .h5 {
+  color: var(--text-1);
+  margin-bottom: 0.35rem;
+}
+
+#education .category {
+  color: var(--text-2);
+  margin-bottom: 0.45rem;
+}
+
+#education .cc-education-header {
+    background: var(--surface-0);
+    padding: 1.5rem;
+    border-right: 1px solid var(--border-soft);
+    height: 100%;
+}
+
+#education .cc-education-header p {
+  margin-bottom: 0.45rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+
+#education .card-body ul {
+    color: var(--text-2);
 }

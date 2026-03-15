@@ -1,14 +1,66 @@
-h5, .h5 {
-  color: black;
+#certification .certification-wrapper {
+  border: 1px solid rgba(16, 56, 77, 0.16);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 252, 255, 0.96));
 }
 
-.carousel-control-prev-icon{
-  background-image: url('https://apufpel.com.br/assets/img/seta_prim.png')
-}
-.carousel-control-next-icon{
- background-image: url('https://apufpel.com.br/assets/img/seta_ult.png')
+.certification-card {
+  border: 1px solid rgba(16, 56, 77, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(8, 31, 45, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
-.carousel-indicators .active{
-    background-color: #f00;
+.cert-media {
+  width: 100%;
+  min-height: 230px;
+  max-height: 230px;
+  background: #f4f8fb;
+}
+
+.cert-media img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  background: #fff;
+  display: block;
+  transition: transform 0.32s ease;
+}
+
+.certification-card:hover .cert-media img {
+  transform: scale(1.02);
+}
+
+.certification-placeholder {
+  height: 230px;
+  width: 100%;
+  background: linear-gradient(145deg, #f8fbff, #eef5ff);
+  border: 1px dashed rgba(16, 56, 77, 0.3);
+}
+
+.cert-placeholder-icon {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+  color: #114463;
+}
+
+.cert-title {
+  padding: 0.9rem 1rem;
+  font-weight: 700;
+  color: #0f3550;
+  font-size: 0.96rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 767px) {
+  .cert-media,
+  .cert-media img,
+  .certification-placeholder {
+    min-height: 200px;
+    max-height: 200px;
+    height: 200px;
+  }
 }

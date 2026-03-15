@@ -4,11 +4,15 @@
 /dist
 /tmp
 /out-tsc
+.angular/
+.angular/cache/
 # Only exists if Bazel was run
 /bazel-out
 
 # dependencies
 /node_modules
+.pnpm-store/
+.npm/
 
 # profiling files
 chrome-profiler-events*.json
@@ -33,14 +37,20 @@ speed-measure-plugin*.json
 
 # misc
 /.sass-cache
+/.cache
 /connect.lock
 /coverage
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+.eslintcache
 testem.log
 /typings
 
 # System Files
 .DS_Store
 Thumbs.db
+.pack

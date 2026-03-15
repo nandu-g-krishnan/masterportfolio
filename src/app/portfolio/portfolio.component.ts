@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgxSpinnerService } from '../../../node_modules/ngx-spinner';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
+  standalone: false,
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
