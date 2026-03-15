@@ -1,0 +1,38 @@
+.footer {
+  background: #0b2636;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.25rem 0 1rem;
+}
+
+.footer .text-muted,
+.footer p {
+  color: rgba(255, 255, 255, 0.75) !important;
+  margin-bottom: 0;
+}
+
+.secondary-social {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.secondary-social-link {
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.04);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.secondary-social-link:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background: rgba(43, 127, 170, 0.6);
+  text-decoration: none;
+}

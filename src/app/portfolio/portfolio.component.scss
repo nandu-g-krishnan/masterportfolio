@@ -1,0 +1,24 @@
+.page-content {
+  display: grid;
+  gap: 0;
+  padding-bottom: 0;
+}
+
+.page-content > * {
+  display: block;
+}
+
+.page-content > *:not(app-intro) {
+  width: 100%;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  .page-content {
+    gap: 0;
+    padding-bottom: 0;
+  }
+}

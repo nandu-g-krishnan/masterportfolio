@@ -1,46 +1,29 @@
 <div class="section" id="experience">
-    <div class="container cc-education">
-        <div class="h4 text-center mb-4 title">Work Experience
+  <div class="container experience-shell">
+    <div class="h4 text-center mb-4 title">Work Experience</div>
+    <div class="timeline-centered">
+      <article
+        class="timeline-entry"
+        *ngFor="let item of experiences; let i = index"
+        [class.timeline-entry-left]="i % 2 === 0"
+        [class.timeline-entry-right]="i % 2 !== 0"
+        appScrollReveal="up">
+        <div class="timeline-entry-inner">
+          <div class="timeline-icon">
+            <i class="fa fa-briefcase" aria-hidden="true"></i>
+          </div>
+          <div class="timeline-label">
+            <span class="timeline-period">{{ item.period }}</span>
+            <h2>{{ item.role }}</h2>
+            <h4>{{ item.company }}</h4>
+            <p>{{ item.summary }}</p>
+            <ul>
+              <li *ngFor="let responsibility of item.responsibilities">{{ responsibility }}</li>
+            </ul>
+          </div>
         </div>
-     <div class="colorlib-narrow-content">
-
-    <div class="row">
-        <div class="col-md-12">
-         <div class="timeline-centered">
-             <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-                <div class="timeline-entry-inner">
-
-                   <div class="timeline-icon color-1">
-                      <i class="icon-pen2"></i>
-                   </div>
-
-                   <div class="timeline-label">
-                    <h2>System Engineer <span>September, 2018 - Present</span></h2>
-                     <h4> TATA Consultancy Services </h4>
-                      <p>As an SE  I've been working as a develeper in Web Development</p>
-                    <ul>
-                        <li>Developed landing pages and online application using <strong> Angular 7 </strong> and <strong> Bootstrap 4</strong>.</li>
-                        <li>Utilized technologies such as <strong>.NET</strong>,<strong>MVC</strong>,
-                            <strong>HTML 5 and CSS3</strong>, <strong>Angular</strong> and <strong>SQL Server 2012</strong> to develop
-                            application.</li>
-                        <li>Worked closely with other team members in tasks such as troubleshooting and debugging.</li>
-                        <li>Developed <strong>Unit test</strong> cases to improve the quality of the code.</li>
-                        <li>Active team player in solving client-side and server-side issues.</li>
-                        <li>Worked closely with Requirement Analysts, Testers and Clients to identify new features of the application.</li>
-                        <li>Active team player in agile processes and comes up with solutions and story points for CR's.</li>
-                        <li>Use SCRUM for Agile Development and participate in team-led solutions, reviewing code for quality and
-                                completeness.</li>
-                        <li>Working in <strong>AZURE Devops</strong>.</li>
-                    </ul>
-
-                   </div>
-                </div>
-             </article>
-          </div>
-
-          </div>
-      </div>
-   </div>
+      </article>
+    </div>
   </div>
 </div>
 

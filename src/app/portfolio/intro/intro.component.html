@@ -1,55 +1,40 @@
 <div class="profile-page">
-    <div class="wrapper">
-      <div class="page-header page-header-small" filter-color="green">
-        <div class="page-header-image" data-parallax="true" style="background-image: url('assets/images/intro.jpg');">
-        </div>
-        <div class="container">
-          <div class="content-center">
+  <div class="wrapper">
+    <div class="page-header page-header-small">
+      <div class="container">
+        <div class="content-center">
+          <div class="hero-content-shell">
             <div class="cc-profile-image">
               <a href="#">
-                <img src="assets/images/nandugkrishnan.jpg" alt="Image" />
+                <img src="assets/images/nandugkrishnan.jpg" alt="Profile image" />
               </a>
             </div>
-            <div class="h2 title">Nandu G Krishnan</div>
-            <p class="category text-white">Full STack Developer</p>
-            <!--<a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
-              data-aos-anchor="data-aos-anchor">Hire Me</a>-->
-            <a class="btn btn-primary"
-              href="https://drive.google.com/file/d/1ChDpyZkJKyS93zn41ulYbAzc1vbftsFR/view" target="_blank"
-              data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
+            <div class="h2 title hero-name">{{ profile.name }}</div>
+            <p class="category text-white">{{ profile.title }}</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" [href]="profile.cvUrl" target="_blank">
+                Download CV
+              </a>
+              <a class="btn btn-outline-light smooth-scroll" href="#experience-projects">View Experience</a>
+            </div>
           </div>
         </div>
-        <div class="section">
-          <div class="container">
-            <div class="button-container">
-              <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.facebook.com/nandu.krishnan2"
-                target="_blank" rel="tooltip" title="Follow me on Facebook">
-                <i class="fa fa-facebook"></i>
-              </a>
-              <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.instagram.com/this_is_ngk/"
-                target="_blank" rel="tooltip" title="Follow me on Instagram">
-                <i class="fa fa-instagram"></i>
-              </a>
-              <a class="btn btn-default btn-round btn-lg btn-icon btn-instagram" href="https://www.linkedin.com/in/nandu-g-krishnan-03aa2614a/"
-                target="_blank" rel="tooltip" title="Follow me on Linkedin">
-                <i class="fa fa-linkedin"></i>
-              </a>
-              <a class="btn btn-default btn-round btn-lg btn-icon" href="https://github.com/nandu-g-krishnan"
-                target="_blank" rel="tooltip" title="Follow me on Github">
-                <i class="fa fa-github"></i>
-              </a>
-              <a class="btn btn-default btn-round btn-lg btn-icon" href="https://twitter.com/NANDUGKRISHNAN1"
-                target="_blank" rel="tooltip" title="Follow me on Twitter">
-                <i class="fa fa-twitter"></i>
-              </a>
-              <!-- <a class="btn btn-default btn-round btn-lg btn-icon google" href="#" target="_blank" rel="tooltip"
-                title="Follow me on Google+">
-                <i class="fa fa-google-plus"></i>
-              </a> -->
-
-            </div>
+      </div>
+      <div class="hero-social-bridge">
+        <div class="container">
+          <div class="primary-social-wrap" appScrollReveal="up">
+            <a class="btn btn-default btn-round btn-lg btn-icon"
+               *ngFor="let social of profile.socialLinks"
+               [href]="social.url"
+               target="_blank"
+               rel="tooltip"
+               [title]="'Follow me on ' + social.platform">
+              <i class="fa" [ngClass]="social.icon"></i>
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
